@@ -35,3 +35,39 @@ let parser = new DOMParser();
             );
             alert(unicodeString);
         }*/
+
+//let jsonResponse = JSON.parse(xhr.responseText); тот же самый эффект от Parser: [object Object]
+
+/*
+Пробовал искать нужную мне строку с помощью Parser
+let parser = new DOMParser();
+        let doc = parser.parseFromString(xhr.responseText, "text/html");
+        let dateTime = doc.querySelector("translation");
+ */
+
+
+
+
+//xhr.response[2].meanings[0].translation.text
+
+/*
+1. xhr.response - это многомерный массив, мне нужно достать из него текст перевода для запрашиваемого слова
+2. в xhr.response содержится 15 объектов
+
+ */
+
+
+/* let arrTranslation = [];
+  for (let i = 0; i < xhr.response.length; i++) {
+console.log(xhr.response[i].meanings)
+
+  }
+
+  let arrTranslationSecond = [];
+  for (let j = 0; j < arrTranslation; j++) {
+
+      arrTranslationSecond.push(arrTranslation[j])*/
+
+/* let inArr = function(val,arr){if(arr===null)return;
+      for(let i=0;i<arr.length;i++){if(arr[i]==val)return true;if('object'==typeof arr[i])if(inArr(val,arr[i]))return true}return false};
+      console.log(inArr("translation", translation));*/
