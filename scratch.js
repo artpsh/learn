@@ -1,3 +1,19 @@
+let message;
+
+message = (login == 'Сотрудник') ? 'Привет' :
+ (login == 'Директор') ? 'Здравствуйте' :
+  (login == '') ? 'Нет логина' :
+                  '';
+
+
+
+
+
+
+
+
+
+
 /*let form = document.querySelector('.word-form')
 let list = document.querySelector('.answer');
 

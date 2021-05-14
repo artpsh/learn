@@ -1,9 +1,10 @@
 let input = document.querySelector('.text-input');
 let sendButton = document.querySelector('.send-button');
 let textArea = document.querySelector('textarea');
-
+// let searchText = input.value
 
 sendButton.addEventListener('click', function (evt) {
+
 
     evt.preventDefault();
 
@@ -21,15 +22,20 @@ sendButton.addEventListener('click', function (evt) {
         }
         let responseArray = xhr.response;
         let newArray = [];
-
+// let searchText = input.value
 
         for (let i in responseArray) {
-            for (let j in responseArray[i].meanings) {
-                for (let u in responseArray[i].meanings[j].translation) {
-                    newArray.push(responseArray[i].meanings[j].translation[u]);
+            // let searchText = input.value
+            // if (responseArray[i].text == input.value)
+            if (i == 0) {
+                for (let j in responseArray[i].meanings) {
+                    for (let u in responseArray[i].meanings[j].translation) {
+
+                        newArray.push(responseArray[i].meanings[j].translation[u]);
+                    }
                 }
             }
-        }
+    }
 
         let cleanArray = [];
 
@@ -43,7 +49,7 @@ sendButton.addEventListener('click', function (evt) {
 
     xhr.send(null);
     input.value = "";
-
+   textArea.innerHTML = "";
 
 })
 
