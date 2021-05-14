@@ -4,7 +4,7 @@ let textArea = document.querySelector('textarea');
 // let searchText = input.value
 
 sendButton.addEventListener('click', function (evt) {
-
+    let searchText = input.value
 
     evt.preventDefault();
 
@@ -22,12 +22,11 @@ sendButton.addEventListener('click', function (evt) {
         }
         let responseArray = xhr.response;
         let newArray = [];
-// let searchText = input.value
+
 
         for (let i in responseArray) {
-            // let searchText = input.value
-            // if (responseArray[i].text == input.value)
-            if (i == 0) {
+
+           if (responseArray[i].text == searchText) {
                 for (let j in responseArray[i].meanings) {
                     for (let u in responseArray[i].meanings[j].translation) {
 
