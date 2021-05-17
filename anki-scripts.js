@@ -53,3 +53,14 @@ sendButton.addEventListener('click', function (evt) {
 })
 
 
+
+function getSelectedText() {
+    if (window.getSelection) {
+        txt = window.getSelection();
+    } else if (window.document.getSelection) {
+        txt =window.document.getSelection();
+    } else if (window.document.selection) {
+        txt = window.document.selection.createRange().text;
+    }
+    return txt;
+}
