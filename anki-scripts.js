@@ -1,7 +1,7 @@
 let input = document.querySelector('.text-input');
 let sendButton = document.querySelector('.send-button');
 let textArea = document.querySelector('textarea');
-// let searchText = input.value
+
 
 sendButton.addEventListener('click', function (evt) {
     let searchText = input.value
@@ -26,7 +26,7 @@ sendButton.addEventListener('click', function (evt) {
 
         for (let i in responseArray) {
 
-           if (responseArray[i].text == searchText) {
+            if (responseArray[i].text == searchText) {
                 for (let j in responseArray[i].meanings) {
                     for (let u in responseArray[i].meanings[j].translation) {
 
@@ -34,7 +34,7 @@ sendButton.addEventListener('click', function (evt) {
                     }
                 }
             }
-    }
+        }
 
         let cleanArray = [];
 
@@ -48,19 +48,27 @@ sendButton.addEventListener('click', function (evt) {
 
     xhr.send(null);
     input.value = "";
-   textArea.innerHTML = "";
+    textArea.innerHTML = "";
 
 })
 
-
-
-function getSelectedText() {
-    if (window.getSelection) {
-        txt = window.getSelection();
-    } else if (window.document.getSelection) {
-        txt =window.document.getSelection();
-    } else if (window.document.selection) {
-        txt = window.document.selection.createRange().text;
+window.addEventListener('dblclick', function () {
+    let txt = window.innerText;
+   window.findString = function findText(text) {
+        alert(text);
     }
-    return txt;
-}
+
+     function getSelectedText() {
+        if (window.getSelection) {
+            txt = window.getSelection();
+        } else if (window.document.getSelection) {
+            txt = window.document.getSelection();
+        } else if (window.document.selection) {
+            txt = window.document.selection.createRange().text;
+        }
+        return txt;
+
+    }
+});
+
+

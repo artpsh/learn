@@ -6,10 +6,47 @@ message = (login == 'Сотрудник') ? 'Привет' :
                   '';
 
 
+onMouseUp="getSelectedText(); alert(txt)"
 
 
 
 
+
+const coucou=  {
+    ' ': [5],
+    d: [10],
+    e: [1],
+    H: [0],
+    l: [2, 3, 9],
+    o: [4, 7],
+    r: [8],
+    w: [6]
+};
+
+const buildString = m => {
+    const result = [];
+    for([letter, numbers] of Object.entries(m))
+{
+    numbers.forEach(i => result[i] = letter);
+}
+    return result.join('');
+}
+
+
+
+
+function ask(question, yes, no) {
+    if (confirm(question)) yes()
+    else no();
+}
+
+ask(
+    "Вы согласны?",
+    () => alert("Вы согласились."),
+    () => alert("Вы отменили выполнение.")
+);
+
+let ask = (question, yes, no) => confirm('Вы согласны?') ? alert("Вы согласились.") : alert("Вы отменили выполнение.");
 
 
 
@@ -87,3 +124,5 @@ console.log(xhr.response[i].meanings)
 /* let inArr = function(val,arr){if(arr===null)return;
       for(let i=0;i<arr.length;i++){if(arr[i]==val)return true;if('object'==typeof arr[i])if(inArr(val,arr[i]))return true}return false};
       console.log(inArr("translation", translation));*/
+
+
