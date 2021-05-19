@@ -126,3 +126,4 @@ console.log(xhr.response[i].meanings)
       console.log(inArr("translation", translation));*/
 
 
+//ondblclick="getSelectedText(); alert(txt)"

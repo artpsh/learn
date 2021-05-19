@@ -52,13 +52,14 @@ sendButton.addEventListener('click', function (evt) {
 
 })
 
-window.addEventListener('dblclick', function () {
-    let txt = window.innerText;
-   window.findString = function findText(text) {
-        alert(text);
+window.addEventListener('mouseup', function() {
+    let textString = window.getSelection().toString();
+    if (textString !== undefined) {
+        alert(textString);
     }
 
-     function getSelectedText() {
+
+  /*   function getSelectedText() {
         if (window.getSelection) {
             txt = window.getSelection();
         } else if (window.document.getSelection) {
@@ -68,7 +69,7 @@ window.addEventListener('dblclick', function () {
         }
         return txt;
 
-    }
+    }*/
 });
 
 
