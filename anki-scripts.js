@@ -62,7 +62,7 @@ window.addEventListener('mouseup', function (evt) {
 
     if (textString !== '') {
 
-        input.value = textString;
+        input.value = textString.replace(/\s+/g, '');;
         let selectionWord = input.value;
         getXMLHttpRequest(selectionWord);
     }
