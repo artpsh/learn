@@ -56,11 +56,16 @@ sendButton.addEventListener('click', function (evt) {
 })
 
 
-window.addEventListener('mouseup', function () {
+window.addEventListener('mouseup', function (evt) {
+    evt.preventDefault();
     let textString = window.getSelection().toString();
-    let selectionWord = textString;
+
     if (textString !== '') {
+
+        input.value = textString;
+        let selectionWord = input.value;
         getXMLHttpRequest(selectionWord);
     }
+
 });
 
