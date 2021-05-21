@@ -1,0 +1,24 @@
+{
+  "name": "AnkiApp Mod",
+  "description": "Translate from Eng/Rus with getSelected method",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "options2.js" ]
+    }
+  ],
+
+
+
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "webNavigation",
+    "notifications",
+    "cookies"
+  ]
+
+
+}
