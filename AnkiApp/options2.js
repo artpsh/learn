@@ -9,11 +9,11 @@ window.addEventListener('mouseup', function (evt) {
         getXMLHttpRequest(selectionWord);
     }
 
-});
+
 
 
 function getXMLHttpRequest(selectionWord) {
-
+    let searchText = textString;
     let xhr = new XMLHttpRequest();
     let url = new URL('https://dictionary.skyeng.ru/api/public/v1/words/search?search=');
     xhr.open('GET', url + selectionWord);
@@ -54,5 +54,5 @@ function getXMLHttpRequest(selectionWord) {
 }
 
 
-
+});
 
