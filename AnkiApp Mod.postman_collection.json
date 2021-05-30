@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "4911f718-9f3d-4e4a-9dc2-897cd947be3d",
+		"name": "AnkiApp Mod",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
